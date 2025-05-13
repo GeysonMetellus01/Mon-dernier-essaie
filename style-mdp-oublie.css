@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    --res:calc(0.01*10vmin);
+}
+section{
+    padding:calc(30 * var(--res));
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+.fenetre{
+    background:#fff;
+    padding:calc(30 * var(--res));
+}
+.conteneur-image img{
+    width:calc(450 * var(--res));
+}
+hr{
+    margin:calc(30 * var(--res)) 0;
+}
+.conteneur-text{
+    margin:calc(30 * var(--res)) 0;
+}
+.conteneur-texte h2{
+    font-size:calc(130 * var(--res));
+    margin-bottom:calc(20 * var(--res));
+}
+.conteneur-texte p{
+    font-size:calc(60 * var(--res));
+    text-align: justify;
+    color:#4d4747;
+}
+.txt-recuperation{
+    margin-top:calc(25 * var(--res));
+    font-size:calc(50 * var(--res));
+    text-align: justify;
+    color:#4d4747;
+}
+
+form{
+    margin-top:calc(40 * var(--res));
+}
+form label{
+    display:block;
+    font-size:calc(50 * var(--res));
+    margin-bottom: calc(20 * var(--res));
+}
+form input{
+    display:block;
+    width:100%;
+    font-size:calc(50 * var(--res));
+    padding:calc(15 * var(--res));
+    outline: none;
+    border-radius:08px;
+    margin-bottom: calc(40 * var(--res));
+    border:2px solid #000;
+}
+form button{
+    float: right;
+    padding:calc(15 * var(--res)) calc(40 * var(--res));
+    font-size:calc(50 * var(--res));
+    font-weight: bold;
+    border-radius: 5px;
+    background-color:#2764E7;
+    color:#fff;
+    border:none;
+}
+.btn-retour{
+    margin-top: calc(120 * var(--res));
+    margin-bottom: calc(20 * var(--res));
+}
+.btn-retour a{
+    text-decoration: none;
+    color:#000;
+    font-size:calc(40 * var(--res));
+    font-weight: bold;
+}

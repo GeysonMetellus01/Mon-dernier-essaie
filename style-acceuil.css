@@ -1,0 +1,406 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    --res: calc(0.01*10vmin);
+}
+
+/*Travaillons sur la barre de menu*/
+header{
+    background-color: #fff;
+    padding:calc(10 * var(--res));
+    box-shadow: 2px 0px 2px 2px #3534348a;
+}
+nav{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width:calc(250 * var(--res));
+}
+.conteneur-btn-connecter a{
+    text-decoration: none;
+    font-size:calc(50*var(--res));
+    background-color: #E85353;
+    padding:04px 10px;
+    border-radius:10px;
+    color:#fff;
+}
+
+/*Section Acceuil*/
+.acceuil{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(#fdfdfd4f, #fdfdfdf3), url(../images/img-acceuil-1.jpg);
+    backdrop-filter: blur(10);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:5px;
+}
+.texte-acceuil{
+    margin-bottom:60px;
+}
+.texte-acceuil h1{
+    text-align: center;
+    font-size: calc(120 * var(--res));
+    color:#E85353;
+}
+.texte-acceuil h2{
+    text-align: center;
+    font-size: calc(62 * var(--res));
+}
+.texte-acceuil h2 span{
+    color:#3664F4;
+}
+
+.citation-acceuil{
+    margin-bottom:50px;
+}
+.citation-acceuil p{
+    text-align: center;
+    font-size: calc(50 * var(--res));
+    color: #525252;
+}
+.citation-acceuil p span{
+    font-size: calc(40 * var(--res));
+}
+.btn-isncription-acceuil{
+    text-align: center;
+}
+
+.btn-isncription-acceuil a{
+    background-color: #E85353;
+    padding:10px;
+    border-radius: 08px;
+    text-decoration: none;
+    color:#fff;
+    font-size: calc(50 * var(--res));
+}
+
+
+
+/*Section Avantage*/
+.section-avantage{
+    padding:10px;
+    /* background-color: #3664F4; */
+}
+
+.conteneur-avantage{
+    display:grid;
+    grid-template-columns:2fr 2fr;
+    gap:5px;
+
+}
+.avantage-boite{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    /* width: 22%; */
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 1px 0px 1px #3534348a
+}
+.img-avantage-conteneur{
+    height:40%;
+    margin-bottom:30px;
+    display: flex;
+    justify-content: center;
+}
+.img-avantage{
+    margin-top:10px;
+    width:calc(150*var(--res));
+    height:auto ;
+
+}
+.texte-avantage-conteneur{
+    height:45%;
+    text-align: center;
+}
+
+/*Section Catalogue*/
+.catalogue{
+    padding:10px;
+}
+.texte-catalogue{
+    margin:calc(50 * var(--res)) calc(0 * var(--res));
+}
+.texte-catalogue h1{
+    text-align: center;
+    font-size:calc(90 * var(--res));
+    color:#E85353;
+}
+.texte-catalogue p{
+    text-align: center;
+    font-size:calc(40 * var(--res));
+    color:#5B5858;
+}
+.genre-catalogue{
+    display:flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-bottom:calc(80 * var(--res));
+}
+.genre-document-catalogue{
+    margin:calc(10 * var(--res));
+    background-color: #2764E7;
+    color:#fff;
+    font-weight: 500;
+    font-size: calc(40 * var(--res));
+    border:1px solid rgb(255, 255, 255);
+    border-radius:05px;
+    padding:calc(10 * var(--res));
+}
+
+.conteneur-documents{
+    display:flex;
+    justify-content: center;
+    margin-bottom:calc(70 * var(--res));
+}
+.conteneur-documents img{
+    margin:calc(10 * var(--res));
+    width:calc(170 * var(--res));
+}
+
+
+.btn-catalogue{
+    display: flex;
+    justify-content: center;
+    margin-bottom:calc(30 * var(--res));
+}
+.btn-catalogue a{
+    text-decoration: none;
+    background-color:#E85353;
+    color:#fff;
+    font-weight: bold;
+    font-size: calc(55 * var(--res));
+    border:1px solid rgb(255, 255, 255);
+    border-radius:05px;
+    padding:calc(10 * var(--res)) calc(35 * var(--res));
+}
+
+/*Section Invitation Auteur*/
+.invit-auteur{
+    width:100%;
+    height:60vh;
+    background-image: linear-gradient(#00c5fb6e, #2764e7), url(../images/img-invit-auteur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding:10px;
+    color:#fff;
+}
+.text-invit-auteur{
+    text-align: center;
+}
+.text-invit-auteur h2{
+    margin-bottom:calc(80 * var(--res));
+    font-size: calc(70 * var(--res));
+}
+.text-invit-auteur p{
+    margin-bottom:calc(60 * var(--res));
+    font-size: calc(55 * var(--res));
+}
+.text-invit-auteur a{
+    background-color: #fff;
+    color:#5B5858;
+    text-decoration: none;
+    padding:calc(20 * var(--res)) calc(40 * var(--res));
+}
+
+/*Plan d'abonnement*/
+
+.plan-abonnement{
+    padding:10px;
+}
+.titre-abonnement{
+    margin:calc(75 * var(--res));
+}
+.titre-abonnement h2{
+    text-align: center;
+    font-size:calc(75 * var(--res));
+    color: #E85353;
+}
+.type-abonnement{
+    text-align: center;
+    margin-bottom:calc(70 * var(--res));
+    display: flex;
+    justify-content: center;
+    gap:5px;
+}
+.active-plan{
+    border:1px solid #2764E7;
+    padding:calc(20 * var(--res));
+    font-size:calc(50 * var(--res));
+    color: #ffffff;
+    background-color: #2764e7;
+}
+.type-abonnement p{
+    border:1px solid #2764E7;
+    padding:calc(20 * var(--res));
+    font-size:calc(50 * var(--res));
+}
+.conteneur-plan-abonnement{
+    margin-top:20px;
+}
+.plan1{
+    border:1px solid #f5f5f5;
+    border-radius: 10px;
+    background-color: #eeeded;
+    padding: 20px;
+}
+.plan2{
+    border:1px solid #f5f5f5;
+    border-radius: 10px;
+    background-color: #eeeded;
+    padding: 20px;
+}
+.entete{
+    margin-top: calc(100 * var(--res));
+    margin-bottom: calc(80 * var(--res));
+    border-bottom: 1px solid #52525260;
+}
+.entete2{
+    margin-top: calc(80 * var(--res));
+    margin-bottom: calc(80 * var(--res));
+    border-bottom: 1px solid #52525260;
+    background: linear-gradient(#00c5fb6e, #2764e7);
+    border-radius: 0px 15px 0px 15px;
+}
+.entete h2{
+    text-align: center;
+    font-size: calc(120 * var(--res));
+    color:#2764E7;
+}
+.entete2 h2{
+    text-align: center;
+    font-size: calc(120 * var(--res));
+    color:#ffffff;
+}
+.entete h2 span{
+    font-size: calc(50 * var(--res));
+    color:#525252;
+}
+.entete2 h2 span{
+    font-size: calc(50 * var(--res));
+    color:#525252;
+}
+
+.entete p{
+    text-align: center;
+    font-size: calc(50 * var(--res));
+    color:#525252;
+}
+.entete2 p{
+    text-align: center;
+    font-size: calc(50 * var(--res));
+    color:#525252;
+}
+.description-plan{
+    padding:calc(30 * var(--res));
+}
+
+.description-plan ul{
+    border-bottom: 1px solid #52525260;
+    list-style: none;
+    margin:auto;
+}
+.description-plan ul li{
+    font-size:calc(60 * var(--res));
+    margin-bottom:calc(60 * var(--res));
+}
+
+.description-plan ul span{
+    display:flex;
+    gap:3px;
+    align-items:start;
+}
+.description-plan ul div img{
+    width:20px;
+}
+.btn-abonnement1{
+    text-align: center;
+    padding:20px;
+}
+.btn-abonnement2{
+    text-align: center;
+    padding:20px;
+}
+.btn-abonnement1 a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: calc(50 * var(--res));
+    padding: 15px;
+    background: linear-gradient(0.25turn, #00C6FB,#2764E7);
+}
+.btn-abonnement2 a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: calc(50 * var(--res));
+    padding: 15px;
+    background: linear-gradient(0.25turn, #ED1F27,#2764E7);
+}
+
+
+/*Pied de page*/
+footer{
+    background: linear-gradient(0.25turn, #00C6FB,#2764E7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding:10px;
+}
+.conteneur-liste{
+    margin-bottom: calc(100 * var(--res));
+    border-bottom:1px solid #525252;
+    padding:10px;
+}
+.conteneur-liste ul{
+    text-align: center;
+    list-style: none;
+}
+.conteneur-liste ul h2{
+    margin-bottom: calc(50 * var(--res)) ;
+    font-size:calc(80 * var(--res));
+    color:#fff;
+}
+.conteneur-liste ul h3{
+    margin-top: calc(60 * var(--res));
+    margin-bottom: calc(50 * var(--res));
+    font-size:calc(90 * var(--res));
+    color:#fff;
+}
+.conteneur-liste ul li a, .conteneur-liste ul li{
+    text-decoration: none;
+    font-size:calc(60 * var(--res));
+    color:#fff;
+}
+.social{
+    display:flex;
+    justify-content: center;
+    gap:5px;
+}
+.social li img{
+    width:calc(100 * var(--res));
+    background-color: #fff;
+    padding:5px;
+}
+.copy p{
+    text-align: center;
+    font-weight: bold;
+    font-size: calc(50*var(--res));
+    color: #fff;
+}

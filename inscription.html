@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription-ANNLI</title>
+    <link rel="stylesheet" href="../css/style-acceuil.css"/>
+    <link rel="stylesheet" href="../css/style-inscription.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-conteneur">
+                <a href="index.html"><img class="logo" src="../images/Logo-Annli.jpg" alt="Image de Notre Logo" /></a>
+            </div>
+            <div class="conteneur-btn-connecter"> 
+                <a href="connexion.html">Se Connecter</a>
+            </div>
+        </nav>
+    </header>
+    <section id="section_inscription">
+        <div class="-conteneur-formulaire-inscription">
+            <h2></h2>
+            <form method="" action="" class="formulaire-inscription">
+                <div class="champ">
+                    <label for="utilisateur">Créer un Nom d'Utilisateur</label>
+                    <input type="text" placeholder="annliAyiti" maxlength="10"/>  
+                </div>
+                <div class="champ">
+                    <label for="utilisateur">Date de Naissance</label>
+                    <input type="date">
+                </div>
+                <div class="champ info-adresse">
+                    <div class=" champ info_pays">
+                        <label for="pays">Pays:</label>
+                        <select id="pays" name="pays" onchange="choixDuPays()" required>
+                            <option value="">Choix du pays de Connexion</option>
+                            <option value="haiti">Haïti</option>
+                            <option value="autre">Autres</option>
+                          </select>
+                    </div>
+                    <div class=" champ dept_com hidden">
+                        <!--Choix du departement-->
+                        <div class="champ info-dept">
+                            <label for="departement">Département:</label>
+                            <select id="departement" name="departement" onchange="updateCommunes()" required>
+                              <option value="">Choisissez votre département</option>
+                              <option value="Ouest">Ouest</option>
+                              <option value="Artibonite">Artibonite</option>
+                              <option value="Centre">Centre</option>
+                              <option value="Nord">Nord</option>
+                              <option value="Nord-Est">Nord-Est</option>
+                              <option value="Nord-Ouest">Nord-Ouest</option>
+                              <option value="Sud-Est">Sud-Est</option>
+                              <option value="Nippes">Nippes</option>
+                              <option value="Sud">Sud</option>
+                              <option value="Grand-Anse">Grand-Anse</option>
+                            </select>
+                        </div>
+
+                        <!--Choix du commune-->
+                        <div class="champ info-com">
+                            <label for="commune">Commune:</label>
+                            <select id="commune" name="commune" required>
+                                <option value="">Choisissez votre commune</option>
+                            </select>
+                        </div>
+                    </div> 
+                
+                    <div class="champ champ-mail">
+                        <label for="utilisateur">Adresse E-mail</label>
+                        <input type="email" placeholder="annliaiyiti@gmail.ht">
+                    </div>
+                    <div class="champ champ-mdp">
+                        <label for="utilisateur">Créer un Mot de Passe</label>
+                        <input type="password">
+                    </div>
+                    <div class="champ champ-mdp-confim">
+                        <label for="utilisateur">Confirmer votre mot de Passe</label>
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="text-confidentiel">
+                    <p>
+                        En cliquant sur <b>Créer un compte</b>, vous acceptez les<a href="#"> Conditions Générales</a>
+                        et la <a href="#">Politique de Confidentialité</a> de notre plateforme.
+                    </p>
+                </div>
+
+                <button type="submit">Créer mon Compte</button>
+                <hr>
+                <div class="txt-connexion"><p>Vous avez déjà un compte? <a href="connexion.html">Se Connecter</a></p></div>
+
+            </form>
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--Script Js pour le choix de pays et departement.-->
+    <script>
+        const communesParDepartement = {
+            "Ouest": [ "Arcahaie", "Cabaret", "Croix-des-Bouquets", "Ganthier", "Thomazeau", "Cornillon",
+                        "Fonds-Verrettes", "Anse-à-Galets", "Pointe-à-Raquette", "Léogâne", "Petit-Goâve", "Grand-Goâve",
+                        "Port-au-Prince", "Carrefour", "Delmas" , "Pétion-Ville", "Kenscoff", "Cité Soleil", "Gressier",
+                        "Tabarre" 
+                     ],
+            "Artibonite" : [ "Dessalines", "Desdunes", "Grande-Saline", "Petite-Rivière-de-l'Artibonite", "Gonaïves", 
+                             "Ennery", "L'Estère", "Gros-Morne","Anse-Rouge","Terre-Neuve" ,"Marmelade", 
+                             "Saint-Michel-de-l'Attalaye","Saint-Marc", "Verrettes", "La Chapelle"
+                            ],
+
+            "Centre" : [ "Cerca-la-Source", "Thomassique","Hinche", "Cerca-Carvajal", "Maïssade", "Thomonde",
+                         "Lascahobas", "Belladère","Savanette","Mirebalais", "Saut-d'Eau", "Boucan-Carré"
+                        ],
+
+            "Nord": [ "Cap-Haïtien","Quartier-Morin","Limonade","Plaine-du-Nord","Milot","Acul-du-Nord","Grande Rivière du Nord",
+                        "Bahon","Saint-Raphaël","Dondon","Le-Borgne", "Port-Margot","Ranquitte","Pignon","La Victoire", 
+                        "Limbé","Bas-Limbé","Plaissance","Pilate"
+                    ],
+
+            "Nord-Est" : ["Fort-Liberté", "Perches", "Ferrier", "Ouanaminthe", "Capotille", "Mont-Organisé", "Trou-du-Nord",
+                          "Caracol" ,"Sainte-Suzanne","Terrier-Rouge", "Vallières", "Carice", "Mombin-Crochu"
+                         ],
+
+            "Nord-Ouest" : ["Môle-Saint-Nicolas", "Baie-de-Henne", "Bombardopolis", "Jean-Rabel", "Port-de-Paix", 
+                            "Bassin-Bleu", "Chansolme", "La Tortue","La pointe des Palmistes","Saint-Louis-du-Nord",
+                            "Anse-à-Foleur"
+                            ],
+
+            "Sud-Est" : ["Bainet", "Côte-de-Fer", "Belle-Anse", "Anse-à-Pitres","Grand-Gosier", "Thiotte", "Jacmel", 
+                         "Cayes-Jacmel", "Marigot", "La Vallée-de-Jacmel"
+                        ],
+
+            "Nippes" : [ "Miragoâne", "Petite-Rivière-de-Nippes", "Fonds-des-Nègres", "Paillant", "Anse-à-Veau", "L'Asile", 
+                         "Petit-Trou-de-Nippes", "Plaisance-du-Sud", "Arnaud", "Barradères", "Grand-Boucan"
+                        ],
+
+            "Sud": ["Aquin","Cavaillon","Fonds-des-Blancs","Saint-Louis-du-Sud","Les Cayes", "Camp-Perrin", "Chantal", 
+                    "Ducis", "Maniche", "Île-à-Vache", "Torbeck", "Les Chardonnières", "Les Anglais", "Tiburon", 
+                    "Les Côteaux", "Port-à-Piment", "Roche-à-Bateau", "Port-Salut", "Arniquet", "Saint-Jean-du-Sud"
+                    ],
+
+            "Grand-Anse" : ["Anse-d'Ainault", "Dame-Marie", "Les Irois", "Corail", "Roseaux","Beaumont", "PestelLes",
+                            "Îles Cayemites", "Jérémie", "Marfranc", "Moron", "Chambellan", "Abricots", "Trou-Bonbon"
+                            ],
+        };
+
+
+        function choixDuPays() {
+        const paysSelection = document.getElementById("pays");
+        const haitiSection = document.querySelector(".dept_com");
+        const departementSelection = document.getElementById("departement");
+
+        
+        if (paysSelection.value === "haiti") {
+            haitiSection.classList.remove("hidden");
+            departementSelect.setAttribute("required", "required");
+        } 
+        else{
+            haitiSection.classList.add("hidden");
+            departementSelect.removeAttribute("required");
+
+            // Réinitialiser les champs
+            departementSelect.value = "";
+            document.getElementById("commune").innerHTML = '<option value="">-- Sélectionnez une commune --</option>';
+        }
+
+    }
+
+    
+    function updateCommunes() {
+        const departementSelect = document.getElementById("departement");
+        const communeSelect = document.getElementById("commune");
+        const selectedDep = departementSelect.value;
+
+        communeSelect.innerHTML = '<option value="">Sélectionnez une commune</option>';
+
+        if (selectedDep && communesParDepartement[selectedDep]) {
+            communesParDepartement[selectedDep].forEach(function(commune) {
+                    const option = document.createElement("option");
+                    option.value = commune;
+                    option.textContent = commune;
+                    communeSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+    
+</body>
+</html>

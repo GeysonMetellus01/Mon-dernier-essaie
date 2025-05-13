@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    --res:calc(0.01 * 10vmin);
+    scroll-behavior: smooth;
+}
+#section_inscription{
+    padding:calc(100 * var(--res)) calc(20 * var(--res));
+}
+.champ{
+    margin-bottom:20px;
+    display: block;
+}
+
+/* .info-dept{
+    margin-bottom:05px;
+} */
+ /* .info-adresse p{
+    font-size:calc(45 * var(--res));
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+ } */
+label{
+    display: block;
+    margin-bottom:calc(10 * var(--res));
+    font-size:calc(50 * var(--res));
+}
+input{
+    width:100%;
+    border:1px solid #a3a3a3;
+    padding:05px;
+    outline:none;
+    font-size: calc(45 * var(--res));
+    border-radius: 05px;
+}
+select{
+    width:100%;
+    border:1px solid #a3a3a3;
+    padding:05px;
+    outline:none;
+    font-size: calc(45 * var(--res));
+    border-radius: 05px;
+}
+input [type='submit']:hover{
+background-color: #2764E7;
+color: #fff;;
+}
+.hidden{
+    display:none;
+}
+.text-confidentiel{
+    margin-bottom:10px;
+}
+.text-confidentiel p{
+    text-align: center;
+    font-size: calc(30 * var(--res));
+}
+.text-confidentiel p a{
+    text-align: center;
+    font-size: calc(30 * var(--res));
+    color:#000;
+    font-style: italic;
+    text-decoration: none;
+}
+
+button{
+    margin-bottom:10px;
+    background-color:#2764E7;
+    color:#fff;
+    padding:10px;
+    border:none;
+    width:100%;
+    font-size: calc(40 * var(--res));
+}
+ 
+.txt-connexion p{
+    text-align: center;
+    font-size: calc(45 * var(--res));
+}
+.txt-connexion p a{
+    font-size: calc(45 * var(--res));
+    color:#000;
+    font-weight: bold;
+    text-decoration: none;
+}
