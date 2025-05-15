@@ -11,8 +11,9 @@ body{
 /*Travaillons sur la barre de menu*/
 header{
     background-color: #fff;
-    padding:calc(10 * var(--res));
+    padding:calc(20 * var(--res));
     box-shadow: 2px 0px 2px 2px #3534348a;
+    border-bottom:1px solid #7fa8ffde;
 }
 nav{
     width:100%;
