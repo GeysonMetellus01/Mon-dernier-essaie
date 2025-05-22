@@ -384,7 +384,7 @@ footer{
 }
 .conteneur-liste ul li a, .conteneur-liste ul li{
     text-decoration: none;
-    font-size:calc(40 * var(--res));
+    font-size:calc(60 * var(--res));
     color:#fff;
 }
 .social{
@@ -400,7 +400,7 @@ footer{
 .copy p{
     text-align: center;
     font-weight: bold;
-    font-size: calc(40*var(--res));
+    font-size: calc(50*var(--res));
     color: #fff;
 }
 
