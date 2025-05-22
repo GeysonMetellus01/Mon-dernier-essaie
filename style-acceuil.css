@@ -393,14 +393,14 @@ footer{
     gap:5px;
 }
 .social li img{
-    width:calc(70 * var(--res));
+    width:calc(85 * var(--res));
     background-color: #fff;
     padding:calc(5*var(--res));
 }
 .copy p{
     text-align: center;
     font-weight: bold;
-    font-size: calc(50*var(--res));
+    font-size: calc(45*var(--res));
     color: #fff;
 }
 
