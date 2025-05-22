@@ -92,8 +92,7 @@ nav{
 
 /*Section Avantage*/
 .section-avantage{
-    padding:10px;
-    /* background-color: #3664F4; */
+    padding:calc(10*var(--res));
 }
 
 .conteneur-avantage{
@@ -105,30 +104,28 @@ nav{
 .avantage-boite{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:flex-start;
+    border:1px solid #3534348a;
     border-radius: 5px;
-    /* width: 22%; */
-    overflow: hidden;
+    overflow: auto;
     background-color: #fff;
-    box-shadow: 0px 1px 0px 1px #3534348a
+    box-shadow: 0px 1px 0px 1px #3534348a;
+    padding:calc(20*var(--res));
 }
 .img-avantage-conteneur{
-    height:40%;
-    margin-bottom:30px;
-    display: flex;
+    margin-bottom:calc(30*var(--res));
+    display:flex;
     justify-content: center;
 }
 .img-avantage{
-    margin-top:10px;
-    width:calc(150*var(--res));
+    margin-top:calc(10*var(--res));
+    width:calc(180*var(--res));
     height:auto ;
 
 }
 .texte-avantage-conteneur{
-    height:45%;
     text-align: center;
 }
-
 /*Section Catalogue*/
 .catalogue{
     padding:10px;
@@ -363,12 +360,12 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding:10px;
+    padding:calc(10*var(--res));
 }
 .conteneur-liste{
     margin-bottom: calc(100 * var(--res));
     border-bottom:1px solid #525252;
-    padding:10px;
+    padding:calc(10*var(--res));
 }
 .conteneur-liste ul{
     text-align: center;
@@ -376,18 +373,18 @@ footer{
 }
 .conteneur-liste ul h2{
     margin-bottom: calc(50 * var(--res)) ;
-    font-size:calc(80 * var(--res));
+    font-size:calc(70 * var(--res));
     color:#fff;
 }
 .conteneur-liste ul h3{
     margin-top: calc(60 * var(--res));
     margin-bottom: calc(50 * var(--res));
-    font-size:calc(90 * var(--res));
+    font-size:calc(60 * var(--res));
     color:#fff;
 }
 .conteneur-liste ul li a, .conteneur-liste ul li{
     text-decoration: none;
-    font-size:calc(60 * var(--res));
+    font-size:calc(40 * var(--res));
     color:#fff;
 }
 .social{
@@ -396,14 +393,14 @@ footer{
     gap:5px;
 }
 .social li img{
-    width:calc(100 * var(--res));
+    width:calc(70 * var(--res));
     background-color: #fff;
-    padding:5px;
+    padding:calc(5*var(--res));
 }
 .copy p{
     text-align: center;
     font-weight: bold;
-    font-size: calc(50*var(--res));
+    font-size: calc(40*var(--res));
     color: #fff;
 }
 
