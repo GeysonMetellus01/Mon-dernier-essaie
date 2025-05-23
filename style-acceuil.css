@@ -476,3 +476,27 @@ footer{
         font-size: calc(30 * var(--res));
         padding: 10px;
     }
+
+    
+        /*ppppppppppppppppppppp*/
+    .conteneur-parametre{
+        display:grid;
+        grid-template-columns:45% 45%;
+        justify-content:space-around;
+    }
+    .conteneur-liste{
+        margin-bottom: calc(50 * var(--res));
+    }
+    .conteneur-liste ul h2{
+        margin-bottom: calc(50 * var(--res)) ;
+        font-size:calc(70 * var(--res));
+        color:#fff;
+    }
+    .conteneur-liste ul h3{
+        margin-top: calc(60 * var(--res));
+        margin-bottom: calc(50 * var(--res));
+        font-size:calc(60 * var(--res));
+    }
+    .conteneur-liste ul li a, .conteneur-liste ul li{
+        font-size:calc(45 * var(--res));
+    }
