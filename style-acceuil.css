@@ -500,3 +500,8 @@ footer{
     .conteneur-liste ul li a, .conteneur-liste ul li{
         font-size:calc(45 * var(--res));
     }
+        .copy p{
+        font-size: calc(40*var(--res));
+    
+        }
+}
