@@ -409,7 +409,7 @@ footer{
 /*partie pour le responsive__----____ Mobile first*/
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     .plan-abonnement{
         padding:50px;
     }
